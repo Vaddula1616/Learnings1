@@ -38,6 +38,7 @@ public class AqlStatementVisitor extends AQLBaseVisitor<Selector<ArtifactEntry>>
         paginator = aqlPaginatorVisitor.visitPageExp(ctx.pageExp());
 
         selector.with(paginator);
+        System.out.println("Commit");
 
         return selector;
     }
